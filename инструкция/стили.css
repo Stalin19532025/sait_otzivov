@@ -1,0 +1,13 @@
+/* сначала пишем название тега или класса */
+/* потом в фигурных скобках пишем настройку стиля */
+/* настройки отделяются ; */
+body{
+    background-color: rgb(191, 215, 200);
+}
+header{
+    background-color: azure;
+}
+
+main{
+    background-color: burlywood;
+}
