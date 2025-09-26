@@ -3,11 +3,53 @@
 /* настройки отделяются ; */
 body{
     background-color: rgb(191, 215, 200);
+
+    /* размер шрифта */
+    font-size: 50px;
+
+    /* название шрифта */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    /* жирность. 100 - самый тонкий, 900 - самый жирный */
+    font-weight: 900;
+
+    /* цвет */
+    color: cadetblue;
+
+    /* курсор */
+    font-style: italic;
+
 }
 header{
-    background-color: azure;
+    background-color: #f0ffff;
+    font-size: 25px;
 }
 
 main{
     background-color: burlywood;
+}
+
+footer{
+    background-color: aqua;
+}
+
+button{
+    background-color: rgb(216, 203, 13);
+    font-size: 25px;
+    border: none;
+    /* скруглить углы */
+    border-radius: 10px;
+
+    /* накинуть тень */
+    /* 4 настройки:
+    смещение оси X
+    смещение оси Y
+    размытие
+    цвет
+     */
+     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5)
+}
+/* чтобы настроить особый класс надо написать точку и его название */
+.красная_кнопка{
+    background-color: red;
 }
