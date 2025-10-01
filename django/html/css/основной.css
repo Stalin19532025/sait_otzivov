@@ -1,0 +1,13 @@
+button{
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+header, footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
