@@ -1,3 +1,12 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
 button{
     font-size: 25px;
     border: none;
@@ -7,7 +16,23 @@ button{
 }
 
 header, footer{
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    /* вертикальное выравнивание внутри флекса */
+    align-items: center;
+}
+
+/* чтобы обратиться к тегу p только внутри footer надо сначала написать родительский тег (footer) потом через пробел нужный тег */
+footer p{
+    margin: 0;
+    /* горизонтальное выравнивание текста */
+    text-align: center;
+
+}
+
+.заголовок, .наполнение{
+    display: flex;
+    align-items: center;
 }

@@ -1,0 +1,23 @@
+body{
+    /* 
+    формат цвета hsl удобен для ручного изменения цвета
+    h-hue(цветовой оттенок)
+    s - saturation(насыщенность)
+    l - luminosity(яркость)
+    */
+    background-color: hsl(20, 25%, 90%);
+}
+
+footer, header {
+    background-color: hsl(20, 25%, 20%);
+}
+
+footer button, header button{
+    background-color: hsl(20, 25%, 35%);
+    color:white
+}
+
+footer, header{
+    color:white
+
+}
