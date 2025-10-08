@@ -5,7 +5,7 @@ body{
     s - saturation(насыщенность)
     l - luminosity(яркость)
     */
-    background-color: hsl(20, 25%, 90%);
+    background-color: hsl(18, 48%, 95%);
 }
 
 footer, header {
@@ -20,4 +20,8 @@ footer button, header button{
 footer, header{
     color:white
 
+}
+
+.карточка{
+    background-color: white;
 }

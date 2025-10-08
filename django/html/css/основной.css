@@ -8,7 +8,7 @@ p{
 }
 
 button{
-    font-size: 25px;
+    font-size: 15px;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -34,5 +34,39 @@ footer p{
 
 .заголовок, .наполнение{
     display: flex;
+    margin-bottom: 15px;
+}
+.заголовок{
     align-items: center;
+}
+
+.наполнение p{
+    font-size: 20px;
+}
+
+.кнопки{
+    display: flex;
+    justify-content: space-between;
+}
+.карточка{
+    padding: 15px;
+    margin: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.аватарка{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.картинка{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 20px;
 }
