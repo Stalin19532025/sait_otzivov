@@ -1,11 +1,14 @@
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт отзывов</title>
-    <link rel="stylesheet" href="css/основной.css">
-    <link rel="stylesheet" href="css/цвета.css">
+    <link rel="stylesheet" href="{% static "css/основной.css" %}">
+    <link rel="stylesheet" href="{% static "css/цвета.css" %}">
 </head>
 <body>
     <header>
@@ -23,7 +26,7 @@
         <div class="карточка">
             <div class="заголовок">
                 <div>
-                    <img src="картинки/Stalin.png" alt="аватар" class="аватарка" >
+                    <img src="{% static "картинки/Stalin.png" %}" alt="аватар" class="аватарка" >
                 </div>
                 <div>
                     <p style="font-size: 20px; font-weight: 900;">имя автора</p>
@@ -32,7 +35,7 @@
             </div>
             <div class="наполнение">
                 <div>
-                    <img src="картинки/плейсхолдер.jpg" alt="картинка" class="картинка" >
+                    <img src="{% static "картинки/плейсхолдер.jpg" %}" alt="картинка" class="картинка" >
                 </div>
                 <div>
                     <div>
@@ -61,7 +64,7 @@
     </main>
     <footer>
         <div>
-            <img src="картинки/logo full.png" alt="логотип" >
+            <img src="{% static "картинки/logo full.png" %}" alt="логотип" >
         </div>
         <div>
             <button>←</button>
