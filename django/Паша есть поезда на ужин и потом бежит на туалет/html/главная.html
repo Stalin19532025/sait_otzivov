@@ -23,44 +23,9 @@
 
     </header>
     <main>
-        <div class="карточка">
-            <div class="заголовок">
-                <div>
-                    <img src="{% static "картинки/Stalin.png" %}" alt="аватар" class="аватарка" >
-                </div>
-                <div>
-                    <p style="font-size: 20px; font-weight: 900;">имя автора</p>
-                    <p style="font-size: 13px; font-weight: 900;">дата поста</p>
-                </div>
-            </div>
-            <div class="наполнение">
-                <div>
-                    <img src="{% static "картинки/плейсхолдер.jpg" %}" alt="картинка" class="картинка" >
-                </div>
-                <div>
-                    <div>
-                        <p>{{ переменная }}</p>
-                    </div>
-                    <div>
-                        <p>{{ посты.first.текст }}</p>
-                        <button>Читать полностью...</button>
-                    </div>
-                </div>
-            </div>
-            <div class="кнопки">
-                <div>
-                    <button>тег 1</button>
-                    <button>тег 2</button>
-                </div>
-                <div>
-                    <button>👍</button>
-                    <button>👎</button>
-                    <button>🖋️</button>
-                    <button>🧺</button>
-                </div>
-            </div>
-        </div>
-
+        {% for пост in посты %}
+            {% include "инклюды/карточка.html" %}
+        {% endfor %}
     </main>
     <footer>
         <div>
