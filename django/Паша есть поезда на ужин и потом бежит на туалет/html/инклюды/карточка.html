@@ -2,16 +2,16 @@
        <div class="карточка">
             <div class="заголовок">
                 <div>
-                    <img src="{{пост.картинки.url }}" alt="аватар" class="аватарка" >
+                    <img src="{% static "картинки/Stalin.png" %}" alt="аватар" class="аватарка" >
                 </div>
                 <div>
                     <p style="font-size: 20px; font-weight: 900;">имя автора</p>
-                    <p style="font-size: 13px; font-weight: 900;">дата поста</p>
+                    <p style="font-size: 13px; font-weight: 900;">{{ пост.дата_поста }}</p>
                 </div>
             </div>
             <div class="наполнение">
                 <div>
-                    <img src="{% static "картинки/плейсхолдер.jpg" %}" alt="картинка" class="картинка" >
+                    <img src="{{ пост.картинка.url }}" alt="картинка" class="картинка" >
                 </div>
                 <div>
                     <div>
