@@ -31,3 +31,14 @@ class Отзыв(models.Model):
           if len(self.текст) > 50:
                 return self.текст[:50] + "..."
           return self.текст
+class Аватарка(models.Model):
+    юзер = models.OneToOneField(Юзер, on_delete=models.CASCADE)
+    картинка = models.ImageField(
+        upload_to="аватарки"
+    )
+
+    class Meta:
+            verbose_name = "Аватарка"
+            verbose_name_plural = "Аватарки"
+    def __str__(self):
+          return self.юзер.username
