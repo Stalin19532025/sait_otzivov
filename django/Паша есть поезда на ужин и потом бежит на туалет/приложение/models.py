@@ -9,6 +9,17 @@ from django.contrib.auth import get_user_model
 
 
 # каждая модель (каждый класс) наследуются от стандартного класс джанго(принимает его стандартные свойства). 
+class Тег(models.Model):
+    текст = models.TextField()
+
+    class Meta:
+            verbose_name = "Тег"
+            verbose_name_plural = "Теги"
+
+    def __str__(self):
+          if len(self.текст) > 50:
+                return self.текст[:50] + "..."
+          return self.текст
 class Отзыв(models.Model):
     автор = models.ForeignKey(Юзер, on_delete=models.CASCADE)
     # каждая переменная класса - это название поля(колонки и таблицы)
@@ -22,6 +33,8 @@ class Отзыв(models.Model):
     )
 
     текст = models.TextField()
+
+    тег = models.ManyToManyField(Тег, through="ОтзывыТеги", blank=True)
 
     class Meta:
             verbose_name = "Отзыв"
@@ -42,3 +55,8 @@ class Аватарка(models.Model):
             verbose_name_plural = "Аватарки"
     def __str__(self):
           return self.юзер.username
+    
+    
+class ОтзывыТеги(models.Model):
+      отзыв = models.ForeignKey(Отзыв, on_delete=models.CASCADE)
+      тег = models.ForeignKey(Тег, on_delete=models.CASCADE)
