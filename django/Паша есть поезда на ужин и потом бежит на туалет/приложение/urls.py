@@ -5,4 +5,5 @@ from .views import *
 
 urlpatterns = [
     path('', домашняя),
+    path('отзыв/<int:айди_отзыва>/', один_отзыв, name="один_отзыв"),
 ]
