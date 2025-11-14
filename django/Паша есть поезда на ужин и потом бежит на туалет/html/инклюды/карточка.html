@@ -5,7 +5,9 @@
                     <img src="{{ пост.автор.аватарка.картинка.url}}" alt="аватар" class="аватарка" >
                 </div>
                 <div>
-                    <p style="font-size: 20px; font-weight: 900;">{{ пост.автор }}</p>
+                    <p style="font-size: 20px; font-weight: 900;">
+                        <a href="{% url "фильрация_по_автору" пост.автор.id %}">{{ пост.автор }}</a>
+                    </p>
                     <p style="font-size: 13px; font-weight: 900;">{{ пост.дата_поста }}</p>
                 </div>
             </div>
@@ -19,7 +21,9 @@
                     </div>
                     <div> 
                         <a href="{% url "один_отзыв" пост.id %}">
-                            <button>Читать полностью...</button>
+                           {% if надо_показывать_кнопку_читать_полностью %}
+                                <button>Читать полностью...</button>
+                           {% endif %}
                         </a>                       
                     </div>
                 </div>
@@ -27,7 +31,7 @@
             <div class="кнопки">
                 <div>
                     {% for тег in пост.тег.all %}
-                    <button>{{ тег.текст }}</button>
+                    <a href="{% url "фильтрация_по_тегу"  тег.текст %}"><button>{{ тег.текст }}</button></a>
                     {% endfor %}
                 </div>
                 <div>

@@ -7,6 +7,11 @@ p{
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+/* убирает подчёркивания у тегов <a> */
+}
+
 button{
     font-size: 15px;
     border: none;
