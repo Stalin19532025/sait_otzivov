@@ -1,53 +1,9 @@
-{% load static %}
+{% extends "base.html" %}
 
+{% block title %}Сайт отзывов{% endblock title %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт отзывов</title>
-    <link rel="stylesheet" href="{% static "css/основной.css" %}">
-    <link rel="stylesheet" href="{% static "css/цвета.css" %}">
-</head>
-<body>
-    <header>
-        <div>
-            <a href="{% url "домашняя" %}">
-                <button>На главную</button></a>
-            <button>Популярные теги</button>
-        </div>
-        <div>Логотип</div>
-        <div>
-            <button>Вход</button>
-            <button>Регистрация</button>
-        </div>
-
-    </header>
-    <main>
-        {% for пост in посты %}
-            {% include "инклюды/карточка.html" %}
-        {% endfor %}
-    </main>
-    <footer>
-        <div>
-            <img src="{% static "картинки/logo full.png" %}" alt="логотип" >
-        </div>
-        <div>
-            <button>←</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>→</button>
-        </div>
-        <div>
-            <!-- тег p создан для текста -->
-            <p>Этот сайт написан с нуля</p>
-            <p>на третьей ступени по питону</p>
-            <p>В Коломенском Учебном Центре</p>
-        
-        </div>
-
-    </footer>
-</body>
-</html>
+{% block content %}
+    {% for пост in посты %}
+        {% include "инклюды/карточка.html" %}
+    {% endfor %}
+{% endblock content %} 

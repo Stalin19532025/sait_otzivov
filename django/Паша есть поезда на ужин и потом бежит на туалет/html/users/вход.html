@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block title %}Вход{% endblock %}
+{% block content %}
+
+<h1>Логин</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div>
+            {{ form.username|add_class:"короткое-текстовое-поле" }}
+            {% if form.username.errors %}
+                <p>{{ form.username.errors.0 }}</p>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.password|add_class:"короткое-текстовое-поле" }}
+            {% if form.password.errors %}
+                <p>{{ form.password.errors.0 }}</p>
+            {% endif %}
+        </div>
+
+        {% if form.errors %}
+            <p>Неверное имя пользователя или пароль.</p>
+        {% endif %}
+
+        <button type="submit">Войти</button>
+        <a href="{% url 'password_reset' %}"><button type="button">Восстановить пароль</button></a>
+    </form>
+
+{% endblock content %}

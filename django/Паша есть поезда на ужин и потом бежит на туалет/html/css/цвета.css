@@ -12,6 +12,12 @@ footer, header {
     background-color: hsl(20, 25%, 20%);
 }
 
+footer button, header button:hover{
+    background-color: hsl(20, 50%, 35%);
+    color:white
+}
+
+
 footer button, header button{
     background-color: hsl(20, 25%, 35%);
     color:white

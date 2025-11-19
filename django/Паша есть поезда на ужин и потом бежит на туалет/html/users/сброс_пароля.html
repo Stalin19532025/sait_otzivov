@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block title %}Сброс пароля{% endblock %}
+{% block content %}
+
+    <h1>Сброс пароля</h1>
+    <p>Введите ваш email, и мы отправим ссылку для сброса пароля.</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="email">Email</label>
+            {{ form.email|add_class:"короткое-текстовое-поле" }}
+        </div>
+        <button type="submit">Отправить ссылку для сброса пароля</button>
+    </form>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block title %}Сброс пароля{% endblock %}
+{% block content %}
+
+    <h1>Сброс пароля</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <div>
+            {{ form.new_password1|add_class:"короткое-текстовое-поле" }}
+            {% if form.new_password1.errors %}
+                <p>{{ form.new_password1.errors.0 }}</p>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.new_password2|add_class:"короткое-текстовое-поле" }}
+            {% if form.new_password2.errors %}
+                <p>{{ form.new_password2.errors.0 }}</p>
+            {% endif %}
+        </div>
+
+        {% if form.errors %}
+            <p>Пожалуйста, исправьте ошибки выше.</p>
+        {% endif %}
+
+        <button type="submit">Установить новый пароль</button>
+    </form>
+
+{% endblock content %}
