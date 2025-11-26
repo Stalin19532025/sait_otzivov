@@ -19,8 +19,16 @@
         </div>
         <div>Логотип</div>
         <div>
-            <button>Вход</button>
-            <button>Регистрация</button>
+            {% if user.is_authenticated %}
+                {{ user.username}}
+                <a href="{% url "создать_отзыв" %}"><button>Создать отзыв</button></a>
+                <a href="{% url "выход" %}?next={{ request.path }}"><button>Выход</button></a>
+            {% else %}
+            <a href="{% url "вход" %}?next={{ request.path }}"><button>Вход</button></a>
+            <a href="{% url "регистрация" %}?next={{ request.path }}"><button>Регистрация</button></a>
+            {% endif %}
+            
+            
         </div>
 
     </header>
