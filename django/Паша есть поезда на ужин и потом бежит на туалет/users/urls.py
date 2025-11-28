@@ -13,7 +13,7 @@ from . import views
 urlpatterns = [
     path(
         'logout/',
-        LogoutView.as_view(template_name='users/logged_out.html', next_page='/'),
+        views.logout_get,
         name='выход'
     ),
     path(

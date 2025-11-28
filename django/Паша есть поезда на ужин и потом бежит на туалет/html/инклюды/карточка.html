@@ -35,10 +35,12 @@
                     {% endfor %}
                 </div>
                 <div>
-                    <button>👍</button>
-                    <button>👎</button>
-                    <button>🖋️</button>
-                    <button>🧺</button>
+                    <a href="{% url "редактировать_отзыв" пост.id %}">
+                        <button>🖋️</button>
+                    </a>
+                    <a href="{% url "удалить_отзыв" пост.id %}" onclick="return confirmRedirect(this)">
+                        <button>🧺</button>
+                    </a>
                 </div>
             </div>
         </div>
